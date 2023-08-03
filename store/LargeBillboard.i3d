@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="LargeBillboard" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="9.0.3"/>
+  </Asset>
+
+  <Files>
+    <File fileId="19" filename="$data/maps/textures/shared/snow_diffuse.dds"/>
+    <File fileId="20" filename="$data/maps/textures/shared/snow_normal.dds"/>
+    <File fileId="21" filename="$data/maps/textures/shared/snow_specular.dds"/>
+    <File fileId="12" filename="$data/placeables/lizard/bunkerSilo/bunkerSilo_diffuse.dds"/>
+    <File fileId="13" filename="$data/placeables/lizard/bunkerSilo/bunkerSilo_normal.dds"/>
+    <File fileId="14" filename="$data/placeables/lizard/bunkerSilo/bunkerSilo_specular.dds"/>
+    <File fileId="22" filename="$data/shaders/snowHeapShader.xml"/>
+    <File fileId="4" filename="$data/shaders/vehicleShader.xml"/>
+    <File fileId="2" filename="$data/shared/assets/lights/lizard/rearLight16_normal.png"/>
+    <File fileId="3" filename="$data/shared/assets/lights/lizard/rearLight16_vmask.png"/>
+    <File fileId="16" filename="$data/shared/assets/wire_diffuse.dds"/>
+    <File fileId="17" filename="$data/shared/assets/wire_normal.dds"/>
+    <File fileId="18" filename="$data/shared/assets/wire_vmask.dds"/>
+    <File fileId="8" filename="$data/shared/clearPlastic_diffuse.png"/>
+    <File fileId="10" filename="$data/shared/default_normal.dds"/>
+    <File fileId="11" filename="$data/shared/default_vmask.dds"/>
+    <File fileId="15" filename="../textures/LargeBillboard.dds"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="Billboard_Concrete" materialId="4">
+      <Texture fileId="12"/>
+      <Normalmap fileId="13"/>
+      <Glossmap fileId="14"/>
+    </Material>
+    <Material name="Billboard_mat" materialId="5" diffuseColor="0.8 0.0156863 0.701961 1" customShaderId="4" customShaderVariation="colorMask">
+      <Normalmap fileId="10"/>
+      <Glossmap fileId="11"/>
+      <CustomParameter name="RDT" value="0 0 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="1 1 1 39"/>
+      <CustomParameter name="colorMat1" value="1 1 1 1"/>
+      <CustomParameter name="colorMat2" value="0.1 1 0.1 1"/>
+      <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+      <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+    </Material>
+    <Material name="Billboard_snow" materialId="6" customShaderId="22">
+      <Texture fileId="19"/>
+      <Normalmap fileId="20"/>
+      <Glossmap fileId="21"/>
+    </Material>
+    <Material name="Billboard_UV" materialId="7">
+      <Texture fileId="15"/>
+    </Material>
+    <Material name="Billboard_Wire" materialId="8">
+      <Texture fileId="16"/>
+      <Normalmap fileId="17"/>
+      <Glossmap fileId="18"/>
+    </Material>
+    <Material name="clearPlastic_mat" materialId="9" alphaBlending="true" customShaderId="4" customShaderVariation="staticLight">
+      <Texture fileId="8"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+      <CustomParameter name="RDT" value="0 0 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="1 1 1 2"/>
+      <CustomParameter name="colorMat1" value="1 0.25 0 2"/>
+      <CustomParameter name="colorMat2" value="0.5 0 0 2"/>
+      <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+      <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+      <CustomParameter name="lightControl" value="0 0 0 0"/>
+      <CustomParameter name="blinkOffset" value="0 0 1 0"/>
+    </Material>
+    <Material name="clearPlastic_mat_nostatic" materialId="10" alphaBlending="true" customShaderId="4" customShaderVariation="staticLight">
+      <Texture fileId="8"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+      <CustomParameter name="RDT" value="0 0 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="1 1 1 2"/>
+      <CustomParameter name="colorMat1" value="1 0.25 0 2"/>
+      <CustomParameter name="colorMat2" value="0.5 0 0 2"/>
+      <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+      <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+      <CustomParameter name="lightControl" value="15 0 0 0"/>
+      <CustomParameter name="blinkOffset" value="0 0 1 0"/>
+    </Material>
+    <Material name="Colli" materialId="11" diffuseColor="0.8 0.8 0.8 1" specularColor="0.494118 1 0">
+    </Material>
+    <Material name="lambert1" materialId="12" diffuseColor="0.494118 0.494118 0.494118 1">
+    </Material>
+    <Material name="rearLight16_mat" materialId="13" diffuseColor="0.494118 0.494118 0.494118 1" customShaderId="4" customShaderVariation="staticLight">
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+      <CustomParameter name="RDT" value="0 0 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="1 1 1 2"/>
+      <CustomParameter name="colorMat1" value="1 0.25 0 2"/>
+      <CustomParameter name="colorMat2" value="0.5 0 0 2"/>
+      <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+      <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+      <CustomParameter name="lightControl" value="0 0 0 0"/>
+      <CustomParameter name="blinkOffset" value="0 0 1 0"/>
+    </Material>
+    <Material name="rearLight16_mat_nostatic" materialId="14" diffuseColor="0.494118 0.494118 0.494118 1" customShaderId="4" customShaderVariation="staticLight">
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+      <CustomParameter name="RDT" value="0 0 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="1 1 1 2"/>
+      <CustomParameter name="colorMat1" value="1 0.25 0 2"/>
+      <CustomParameter name="colorMat2" value="0.5 0 0 2"/>
+      <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+      <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+      <CustomParameter name="lightControl" value="15 0 0 0"/>
+      <CustomParameter name="blinkOffset" value="0 0 1 0"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="LargeBillboard.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+      <TransformGroup name="LargeBillboard" nodeId="33">
+        <TransformGroup name="clearArea" nodeId="34">
+          <TransformGroup name="clearAreaStart" translation="-1.25 0 -2" nodeId="35"/>
+          <TransformGroup name="clearAreaWidth" translation="-1.25 0 2" nodeId="36"/>
+          <TransformGroup name="clearAreaHeight" translation="1.25 0 -2" nodeId="37"/>
+        </TransformGroup>
+        <TransformGroup name="levelingArea" nodeId="38">
+          <TransformGroup name="levelingAreaStart" translation="-1.25 0 -2" nodeId="39"/>
+          <TransformGroup name="levelingAreaWidth" translation="-1.25 0 2" nodeId="40"/>
+          <TransformGroup name="levelingAreaHeight" translation="1.25 0 -2" nodeId="41"/>
+        </TransformGroup>
+        <TransformGroup name="testArea1Start" translation="-2.35 0 -4.2" nodeId="42">
+          <TransformGroup name="testArea1End" translation="4.7 9.5 8.4" nodeId="43"/>
+        </TransformGroup>
+        <TransformGroup name="tipOcclusionUpdateArea1Start" translation="-1.5 1.13687e-15 -2.25" nodeId="44">
+          <TransformGroup name="tipOcclusionUpdateArea1End" translation="3 0 4.5" nodeId="45"/>
+        </TransformGroup>
+        <Shape shapeId="1" name="tipCollision" visibility="false" static="true" collisionMask="524288" density="0.0001" nodeId="46" materialIds="12" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        <TransformGroup name="visuals" nodeId="47">
+          <TransformGroup name="lights" nodeId="48">
+            <Shape shapeId="2" name="workingLight10" translation="2.236 5.715 3.25145" rotation="0 -5.96688e-06 0" clipDistance="300" nodeId="49" materialIds="13" castsShadows="true" receiveShadows="true">
+              <Shape shapeId="3" name="glass_static" translation="-0.011925 0.0551126 -0.00317312" clipDistance="75" nodeId="50" materialIds="9" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+              <Shape shapeId="4" name="innerPartStatic" clipDistance="75" nodeId="51" materialIds="13" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+              <TransformGroup name="Lights" translation="0 3.72529e-09 0" nodeId="52" weatherRequiredMask="64">
+                <Shape shapeId="5" name="glass_static" translation="-0.011925 0.0551126 -0.00317312" clipDistance="75" nodeId="53" materialIds="10" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+                <Shape shapeId="6" name="innerPartStatic" clipDistance="75" nodeId="54" materialIds="14" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+                <Light name="spotLight1" translation="-0.0510552 0.0729143 4.46338e-09" rotation="65 90 0" clipDistance="200" nodeId="55" type="spot" color="1 1 1" emitDiffuse="true" emitSpecular="true" range="3.5" coneAngle="125" dropOff="4"/>
+              </TransformGroup>
+            </Shape>
+            <Shape shapeId="2" name="workingLight10" translation="-2.296 5.715 3.25076" rotation="0 180 0" clipDistance="300" nodeId="56" materialIds="13" castsShadows="true" receiveShadows="true">
+              <Shape shapeId="3" name="glass_static" translation="-0.011925 0.0551126 -0.00317312" clipDistance="75" nodeId="57" materialIds="9" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+              <Shape shapeId="4" name="innerPartStatic" clipDistance="75" nodeId="58" materialIds="13" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+              <TransformGroup name="Lights" translation="0 3.72529e-09 0" nodeId="59" weatherRequiredMask="64">
+                <Shape shapeId="5" name="glass_static" translation="-0.011925 0.0551126 -0.00317312" clipDistance="75" nodeId="60" materialIds="10" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+                <Shape shapeId="6" name="innerPartStatic" clipDistance="75" nodeId="61" materialIds="14" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+                <Light name="spotLight1" translation="-0.0510552 0.0729143 4.46338e-09" rotation="65 90 0" clipDistance="200" nodeId="62" type="spot" color="1 1 1" emitDiffuse="true" emitSpecular="true" range="3.5" coneAngle="125" dropOff="4"/>
+              </TransformGroup>
+            </Shape>
+            <Shape shapeId="2" name="workingLight10" translation="-2.296 5.715 1.09522" rotation="0 180 0" clipDistance="300" nodeId="63" materialIds="13" castsShadows="true" receiveShadows="true">
+              <Shape shapeId="3" name="glass_static" translation="-0.011925 0.0551126 -0.00317312" clipDistance="75" nodeId="64" materialIds="9" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+              <Shape shapeId="4" name="innerPartStatic" clipDistance="75" nodeId="65" materialIds="13" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+              <TransformGroup name="Lights" translation="0 3.72529e-09 0" nodeId="66" weatherRequiredMask="64">
+                <Shape shapeId="5" name="glass_static" translation="-0.011925 0.0551126 -0.00317312" clipDistance="75" nodeId="67" materialIds="10" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+                <Shape shapeId="6" name="innerPartStatic" clipDistance="75" nodeId="68" materialIds="14" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+                <Light name="spotLight1" translation="-0.0510552 0.0729143 4.46338e-09" rotation="65 90 0" clipDistance="200" nodeId="69" type="spot" color="1 1 1" emitDiffuse="true" emitSpecular="true" range="3.5" coneAngle="125" dropOff="4"/>
+              </TransformGroup>
+            </Shape>
+            <Shape shapeId="2" name="workingLight10" translation="-2.296 5.715 -1.06217" rotation="0 180 0" clipDistance="300" nodeId="70" materialIds="13" castsShadows="true" receiveShadows="true">
+              <Shape shapeId="3" name="glass_static" translation="-0.011925 0.0551126 -0.00317312" clipDistance="75" nodeId="71" materialIds="9" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+              <Shape shapeId="4" name="innerPartStatic" clipDistance="75" nodeId="72" materialIds="13" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+              <TransformGroup name="Lights" translation="0 3.72529e-09 0" nodeId="73" weatherRequiredMask="64">
+                <Shape shapeId="5" name="glass_static" translation="-0.011925 0.0551126 -0.00317312" clipDistance="75" nodeId="74" materialIds="10" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+                <Shape shapeId="6" name="innerPartStatic" clipDistance="75" nodeId="75" materialIds="14" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+                <Light name="spotLight1" translation="-0.0510552 0.0729143 4.46338e-09" rotation="65 90 0" clipDistance="200" nodeId="76" type="spot" color="1 1 1" emitDiffuse="true" emitSpecular="true" range="3.5" coneAngle="125" dropOff="4"/>
+              </TransformGroup>
+            </Shape>
+            <Shape shapeId="2" name="workingLight10" translation="-2.296 5.715 -3.21927" rotation="0 180 0" clipDistance="300" nodeId="77" materialIds="13" castsShadows="true" receiveShadows="true">
+              <Shape shapeId="3" name="glass_static" translation="-0.011925 0.0551126 -0.00317312" clipDistance="75" nodeId="78" materialIds="9" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+              <Shape shapeId="4" name="innerPartStatic" clipDistance="75" nodeId="79" materialIds="13" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+              <TransformGroup name="Lights" translation="0 3.72529e-09 0" nodeId="80" weatherRequiredMask="64">
+                <Shape shapeId="5" name="glass_static" translation="-0.011925 0.0551126 -0.00317312" clipDistance="75" nodeId="81" materialIds="10" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+                <Shape shapeId="6" name="innerPartStatic" clipDistance="75" nodeId="82" materialIds="14" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+                <Light name="spotLight1" translation="-0.0510552 0.0729143 4.46338e-09" rotation="65 90 0" clipDistance="200" nodeId="83" type="spot" color="1 1 1" emitDiffuse="true" emitSpecular="true" range="3.5" coneAngle="125" dropOff="4"/>
+              </TransformGroup>
+            </Shape>
+            <Shape shapeId="2" name="workingLight10" translation="2.236 5.715 -3.21927" rotation="0 -5.96688e-06 0" clipDistance="300" nodeId="84" materialIds="13" castsShadows="true" receiveShadows="true">
+              <Shape shapeId="3" name="glass_static" translation="-0.011925 0.0551126 -0.00317312" clipDistance="75" nodeId="85" materialIds="9" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+              <Shape shapeId="4" name="innerPartStatic" clipDistance="75" nodeId="86" materialIds="13" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+              <TransformGroup name="Lights" translation="0 3.72529e-09 0" nodeId="87" weatherRequiredMask="64">
+                <Shape shapeId="5" name="glass_static" translation="-0.011925 0.0551126 -0.00317312" clipDistance="75" nodeId="88" materialIds="10" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+                <Shape shapeId="6" name="innerPartStatic" clipDistance="75" nodeId="89" materialIds="14" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+                <Light name="spotLight1" translation="-0.0510552 0.0729143 4.46338e-09" rotation="65 90 0" clipDistance="200" nodeId="90" type="spot" color="1 1 1" emitDiffuse="true" emitSpecular="true" range="3.5" coneAngle="125" dropOff="4"/>
+              </TransformGroup>
+            </Shape>
+            <Shape shapeId="2" name="workingLight10" translation="2.236 5.715 -1.06166" rotation="0 -5.96688e-06 0" clipDistance="300" nodeId="91" materialIds="13" castsShadows="true" receiveShadows="true">
+              <Shape shapeId="3" name="glass_static" translation="-0.011925 0.0551126 -0.00317312" clipDistance="75" nodeId="92" materialIds="9" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+              <Shape shapeId="4" name="innerPartStatic" clipDistance="75" nodeId="93" materialIds="13" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+              <TransformGroup name="Lights" translation="0 3.72529e-09 0" nodeId="94" weatherRequiredMask="64">
+                <Shape shapeId="5" name="glass_static" translation="-0.011925 0.0551126 -0.00317312" clipDistance="75" nodeId="95" materialIds="10" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+                <Shape shapeId="6" name="innerPartStatic" clipDistance="75" nodeId="96" materialIds="14" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+                <Light name="spotLight1" translation="-0.0510552 0.0729143 4.46338e-09" rotation="65 90 0" clipDistance="200" nodeId="97" type="spot" color="1 1 1" emitDiffuse="true" emitSpecular="true" range="3.5" coneAngle="125" dropOff="4"/>
+              </TransformGroup>
+            </Shape>
+            <Shape shapeId="2" name="workingLight10" translation="2.236 5.715 1.09611" rotation="0 -5.96688e-06 0" clipDistance="300" nodeId="98" materialIds="13" castsShadows="true" receiveShadows="true">
+              <Shape shapeId="3" name="glass_static" translation="-0.011925 0.0551126 -0.00317312" clipDistance="75" nodeId="99" materialIds="9" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+              <Shape shapeId="4" name="innerPartStatic" clipDistance="75" nodeId="100" materialIds="13" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+              <TransformGroup name="Lights" translation="0 3.72529e-09 0" nodeId="101" weatherRequiredMask="64">
+                <Shape shapeId="5" name="glass_static" translation="-0.011925 0.0551126 -0.00317312" clipDistance="75" nodeId="102" materialIds="10" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+                <Shape shapeId="6" name="innerPartStatic" clipDistance="75" nodeId="103" materialIds="14" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+                <Light name="spotLight1" translation="-0.0510552 0.0729143 4.46338e-09" rotation="65 90 0" clipDistance="200" nodeId="104" type="spot" color="1 1 1" emitDiffuse="true" emitSpecular="true" range="3.5" coneAngle="125" dropOff="4"/>
+              </TransformGroup>
+            </Shape>
+            <TransformGroup name="pointLights" translation="0 7.74618 0.02" nodeId="105" weatherRequiredMask="64">
+              <Light name="light" translation="-3 0 0" nodeId="106" type="point" color="1 1 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.0012" depthMapSlopeScaleBias="2" depthMapSlopeClamp="0.0005" depthMapResolution="1024" shadowFarDistance="1000" shadowExtrusionDistance="200" pcssLightSize="50.7906" pcssLightDistance="0.66" pcssDepthBiasFactor="1" pcssMaxPenumbraSize="1" shadowPerspective="false" range="4"/>
+              <Light name="light" translation="3 0 0" nodeId="107" type="point" color="1 1 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.0012" depthMapSlopeScaleBias="2" depthMapSlopeClamp="0.0005" depthMapResolution="1024" shadowFarDistance="1000" shadowExtrusionDistance="200" pcssLightSize="50.7906" pcssLightDistance="0.66" pcssDepthBiasFactor="1" pcssMaxPenumbraSize="1" shadowPerspective="false" range="4"/>
+            </TransformGroup>
+          </TransformGroup>
+          <Shape shapeId="7" name="LargeBillboard" rotation="90 -0 0" clipDistance="500" nodeId="108" materialIds="5" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="8" name="LargeBillboard_Concrete" rotation="90 -0 0" clipDistance="500" nodeId="109" materialIds="4" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="9" name="LargeBillboard_UV" rotation="90 -0 0" clipDistance="500" nodeId="110" materialIds="7" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="10" name="LargeBillboard_Wire" rotation="90 -0 0" clipDistance="500" nodeId="111" materialIds="8" castsShadows="true" receiveShadows="true"/>
+          <TransformGroup name="winter" nodeId="112">
+            <Shape shapeId="11" name="LargeBillboard_snow" translation="-0.0297125 0.363167 0.017985" clipDistance="500" nodeId="113" materialIds="6" castsShadows="true" receiveShadows="true" weatherRequiredMask="1024"/>
+            <Shape shapeId="12" name="LargeBillboard_snow.001" clipDistance="500" nodeId="114" materialIds="6" castsShadows="true" receiveShadows="true" weatherRequiredMask="1024"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="collisions" nodeId="115">
+          <Shape shapeId="13" name="Colli_1" scale="1 1.021 1" static="true" nodeId="116" materialIds="11" nonRenderable="true" distanceBlending="false"/>
+          <Shape shapeId="14" name="Colli_2" static="true" nodeId="117" materialIds="11" nonRenderable="true" distanceBlending="false"/>
+          <Shape shapeId="15" name="Colli_3" static="true" nodeId="118" materialIds="11" nonRenderable="true" distanceBlending="false"/>
+          <Shape shapeId="16" name="Colli_4" static="true" nodeId="119" materialIds="11" nonRenderable="true" distanceBlending="false"/>
+          <Shape shapeId="17" name="Colli_5" static="true" nodeId="120" materialIds="11" nonRenderable="true" distanceBlending="false"/>
+        </TransformGroup>
+      </TransformGroup>
+  </Scene>
+
+</i3D>

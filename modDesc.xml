@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="72">
+    <author>SoSi-Modding</author>
+    <version>1.0.0.0</version>
+    <title>
+        <en>Large Billboard DK edit</en>
+		<de>Großes Werbeschild DK edit</de>
+		<fr>Grand Panneau Publicitaire DK edit</fr>
+    </title>
+    <description>
+        <en><![CDATA[Large billboard to place on your map that generates hourly income. At night, the billboard is illuminated by automatic lights.
+The advertisement can be exchanged in the LargeBillboard.dds in the "textures" folder.
+
+Price: 50000 $
+Income per Hour: 350 $
+Daily Upkeep: 100 $]]></en>
+		<de><![CDATA[Großes Werbeschild zum Platzieren auf deiner Map, welches stündliches Einkommen generiert. Nachts wird das Werbeschild durch automatische Lichter beleuchtet.
+Die Werbung kann in der LargeBillboard.dds im "textures" Ordner ausgetauscht werden.
+
+Preis: 50000 €
+Einkommen pro Stunde: 350 €
+Unterhalt: 100 €/Tag]]></de>
+		<fr><![CDATA[Grand panneau publicitaire à placer sur ta map, qui génère des revenus horaires. La nuit, le panneau publicitaire est éclairé par des lumières automatiques.
+La publicité peut être remplacée dans le fichier LargeBillboard.dds dans le dossier "textures".
+
+Prix: 50000 €
+Revenu par heure: 350 €
+Entretien quotidien: 100 €]]></fr>
+    </description>
+    <iconFilename>icon_LargeBillboard.png</iconFilename>
+    <multiplayer supported="true" />
+
+    <storeItems>
+        <storeItem xmlFilename="store/LargeBillboard.xml"/>
+    </storeItems>
+	
+	<placeableTypes>
+		<type name="LargeBillboard" parent="simplePlaceable" filename="$dataS/scripts/placeables/Placeable.lua">
+			<specialization name="incomePerHour" />
+		</type>
+	</placeableTypes>
+	
+	<l10n>
+        <text name="shopItem_LargeBillboard">
+			<en>Large Billboard DK edit</en>
+			<de>Großes Werbeschild DK edit</de>
+			<fr>Grand Panneau Publicitaire DK edit</fr>
+        </text>
+    </l10n>
+</modDesc>
